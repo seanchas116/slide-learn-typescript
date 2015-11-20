@@ -13,5 +13,9 @@
   "dependencies": {
     "node-static": "^0.7.7",
     "reveal.js": "^3.2.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-gh-pages": "^0.5.4"
   }
 }
