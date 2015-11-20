@@ -385,6 +385,24 @@ TypeScript の型の基本は `interface`
 
 ---
 
+## 関数もinterfaceで表せる
+
+```ts
+function foo(a: number, b: string) {
+  return 100;
+}
+
+type FooType = typeof foo;
+type FooType = (a: number, b: string) => number;
+interface FooType {
+  (a: number, b: string): number;
+}
+```
+
+すべて同じ意味
+
+---
+
 ## TypeScript のモジュール管理
 
 * **ES6 スタイル** (新しい)
@@ -473,6 +491,24 @@ src/index.ts
 ---
 
 ![描画結果](images/rectcircle.png)
+
+---
+
+## class も interface で表せる
+
+class → **interface型** かつ **new呼び出しできる値**
+
+```ts
+interface Circle {
+  x: number; y: number; r: number;
+  draw(ctx: CanvasRenderingContext2D) void;
+}
+interface CircleStatic {
+  new (x: number, y: number, r: number): Circle;
+  unit(): Circle;
+}
+var Circle: CircleStatic = ...
+```
 
 ---
 
