@@ -490,6 +490,18 @@ src/index.ts
 
 ---
 
+## tsconfig.jsonに追加
+
+```json
+  "files": [
+    ...
+    "src/Circle.ts",
+    "src/Rectangle.ts"
+  ]
+```
+
+---
+
 ![描画結果](images/rectcircle.png)
 
 ---
@@ -608,6 +620,17 @@ tsd.json
 ```
 
 DefinitelyTyped から型情報を取ってきて管理する
+
+---
+
+## tsconfig.jsonに追加
+
+```json
+  "files": [
+    ...
+    "typings/tsd.d.ts"
+  ]
+```
 
 ---
 
