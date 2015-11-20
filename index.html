@@ -6,6 +6,7 @@
     <title>TypeScript速習会</title>
     <link rel="stylesheet" href="node_modules/reveal.js/css/reveal.css">
     <link rel="stylesheet" href="node_modules/reveal.js/css/theme/white.css" id="theme">
+    <link rel="stylesheet" href="node_modules/reveal.js/lib/css/zenburn.css" id="theme">
     <style>
       * {
         text-transform: none !important;
@@ -30,8 +31,8 @@
         dependencies: [
           { src: 'node_modules/reveal.js/plugin/markdown/marked.js'},
           { src: 'node_modules/reveal.js/plugin/markdown/markdown.js'},
-          { src: 'node_modules/reveal.js/plugin/highlight/highlight.js'},
-          { src: 'node_modules/reveal.js/plugin/notes/notes.js' }
+          { src: 'node_modules/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'node_modules/reveal.js/plugin/notes/notes.js', async: true }
         ]
       });
     </script>
