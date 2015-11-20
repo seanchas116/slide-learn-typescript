@@ -8,9 +8,45 @@ Nov. 20, 2015
 
 ## 今日紹介すること
 
-* 基本的なTypeScriptのコードを書く方法
-* TypeScriptプロジェクトのセットアップ方法
-* 既存のJavaScriptと組み合わせる
+* TypeScriptプロジェクトのセットアップ
+* 基本的なTypeScriptのコードを書く
+* 既存のJavaScriptライブラリを使う
+
+---
+
+# TypeScript の紹介
+
+
+---
+
+## TypeScript とは?
+
+* JavaScript + 静的型付け
+  * (ほぼ) JavaScript の上位互換
+* 最新JavaScript (ES2015以降) の文法も積極的に取り入れている
+
+---
+
+## TypeScript のうれしい所
+
+* 型チェックでエラーを未然に発見
+* エディタ上でのコード補完 / リファクタリング
+* JavaScript / CoffeeScript などとの共存
+
+---
+
+## TypeScript のうれしくない所
+
+* JavaScriptの悪い点も引き継いでいる
+* `any`、`null`等による型安全性の穴
+
+---
+
+## TypeScript リンク
+
+* Webサイト http://www.typescriptlang.org/
+* GitHub https://github.com/Microsoft/TypeScript
+* 言語仕様 https://github.com/Microsoft/TypeScript/blob/master/doc/spec.md
 
 ---
 
@@ -34,18 +70,8 @@ https://github.com/seanchas116/learn-typescript
 
 ## エディタ
 
-* Atom + atom-typescript
-
----
-
-# TypeScriptの紹介
-
----
-
-## TypeScriptの紹介
-
-* JavaScript + 静的型
-  * 基本的には JavaScript の上位互換
+### Atom + atom-typescript
+個人的おすすめ
 
 ---
 
@@ -72,7 +98,24 @@ https://github.com/seanchas116/learn-typescript
 ```
 mkdir learn-typescript && cd learn-typescript
 npm init
+```
+
+---
+
+## ツールのインストール
+
+### TypeScript
+
+```
+# 安定版
 npm install --save-dev typescript
+# nightly版 (機能が多い / 冒険したい人におすすめ)
+npm install --save-dev typescript@next
+```
+
+### watchify
+
+```
 npm install --save-dev watchify
 ```
 
@@ -97,9 +140,11 @@ TypeScriptのプロジェクト管理に使われるファイル
 }
 ```
 
+詳しい説明は[TypeScriptのWiki](https://github.com/Microsoft/typescript/wiki/tsconfig.json)へ
+
 ---
 
-## tsconfig.json
+## tsconfig.json + atom-typescript
 
 atom-typescriptを使う人はさらに
 
@@ -164,7 +209,7 @@ package.json
 
 ---
 
-## まとめ
+## 用意したファイル
 
 * `package.json`
   * 全般的プロジェクト設定
